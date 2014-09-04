@@ -13,6 +13,7 @@ def justify(file_name, justify_length):
 		
 		out_words = []
 		num_chars = 0
+		last_line_index = 0
 		# iterate over words, writing new lines when necessary
 		for k in xrange(len(words)):
 			word = words[k]
@@ -27,7 +28,8 @@ def justify(file_name, justify_length):
 				# add word to out_words
 				out_words.append(words[k])
 				num_chars += chars_to_add
-			else:
+				last_line_index = k
+			elif last_line_index < (len(words) - 1):
 				num_rem_spaces = justify_length - num_chars + len(out_words)
 			 	# write new line
 				for i in xrange(len(out_words)):
@@ -47,22 +49,22 @@ def justify(file_name, justify_length):
 				print('')
 				num_chars = 0
 				out_words = []
-
-	 	# write new line
-		num_rem_spaces = justify_length - num_chars + (len(out_words) - 1)
-		for i in xrange(len(out_words)):
-			out_word = out_words[i]
-			# write word					
-			for char in out_word:
-				sys.stdout.write(char)
-			# write spaces
-			num_rem_words = len(out_words) - i - 1
-			if (num_rem_words > 0):
-				num_bw_spaces = int(math.ceil(1.0 * num_rem_spaces / num_rem_words))	
-				for i in xrange(num_bw_spaces):
-					sys.stdout.write(' ')
-				num_rem_spaces -= num_bw_spaces		
-		print('')
+			else:
+			 	# write new line
+				num_rem_spaces = justify_length - num_chars + (len(out_words) - 1)
+				for i in xrange(len(out_words)):
+					out_word = out_words[i]
+					# write word					
+					for char in out_word:
+						sys.stdout.write(char)
+					# write spaces
+					num_rem_words = len(out_words) - i - 1
+					if (num_rem_words > 0):
+						num_bw_spaces = int(math.ceil(1.0 * num_rem_spaces / num_rem_words))	
+						for i in xrange(num_bw_spaces):
+							sys.stdout.write(' ')
+						num_rem_spaces -= num_bw_spaces		
+				print('')
 
 	
 			
