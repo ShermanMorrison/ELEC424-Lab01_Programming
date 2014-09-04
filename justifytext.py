@@ -2,7 +2,7 @@ import sys
 import math
 
 # 
-# INSERT DESCRIPTION HERE
+# Prints out a new version of a text file justified to the given line length justify_length
 #
 def justify(file_name, justify_length):
 
@@ -13,20 +13,23 @@ def justify(file_name, justify_length):
 		
 		out_words = []
 		num_chars = 0
+		
 		# iterate over words, writing new lines when necessary
 		for k in xrange(len(words)):
 			word = words[k]
-			
+			if (len(word) > justify_length):
+				print("")
+				exit("ERROR: Remaining text contains a word longer than the justify length")
 			if k == (len(words) - 1):
 				chars_to_add = len(word)
 			else:
 				chars_to_add = len(word) + 1
-
 			# if adding word does not exceed the size of the line
 			if (chars_to_add + num_chars <= justify_length):
 				# add word to out_words
 				out_words.append(words[k])
 				num_chars += chars_to_add
+				
 			else:
 				num_rem_spaces = justify_length - num_chars + len(out_words)
 			 	# write new line
@@ -45,8 +48,12 @@ def justify(file_name, justify_length):
 						num_rem_spaces -= num_bw_spaces	
 				# create a fresh new line
 				print('')
-				num_chars = 0
-				out_words = []
+				
+				if k == (len(words) - 1):
+					num_chars = len(word)
+				else:
+					num_chars = len(word) + 1
+				out_words = [words[k]]
 
 	 	# write new line
 		num_rem_spaces = justify_length - num_chars + (len(out_words) - 1)
