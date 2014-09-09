@@ -4,6 +4,11 @@
 #include "sort.h"
 #include "read_data.h"
 
+
+// function definition
+void divide(int array[], int start, int end);
+void order(int array[], int start, int middle, int end);
+
 /* 
  * Takes a file name as input from command line
  * which contains array of integers. These are
@@ -59,5 +64,49 @@ main(int argc, char **argv)
 void 
 merge_sort(int input_array[], int output_array[], int num)
 {
-	/* COMPLETE ME */
+	int i;
+	
+	for (i = 0; i < num; i++){
+		output_array[i] = input_array[i];
+	}
+	
+	divide(output_array,0,num-1);
+
 }
+
+void order(int array[], int start, int middle, int end){
+
+	int old_array[end - 1];
+	int index;
+	for (index = start; index < (end + 1); index++){
+		old_array[index] = array[index];
+	}
+	
+	int i = start;
+	int j = middle + 1;
+	
+	while ((i+j) < (middle + end + 2)){
+		if (((old_array[i] < old_array[j]) || (j > end)) && (i<=middle)){
+			array[i+j-middle-1] = old_array[i];
+			i++;
+		}
+		else{
+			array[i+j-middle-1] = old_array[j];
+			j++;
+		}
+	}
+}
+
+
+void divide(int array[], int start, int end){
+	if (start != end){
+		divide(array, start, (start + end)/2);
+		divide(array,(start + end)/2 + 1, end);
+		order(array,start,(start+end)/2,end);
+	}
+}
+
+
+
+
+

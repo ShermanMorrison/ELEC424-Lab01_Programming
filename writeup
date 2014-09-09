@@ -1,11 +1,174 @@
 Lab01: Programming in a Linux Environment
-<PUT NAME HERE>
+Jonathan Wilson
 
 Part 1
 
 Q1. What were the arguments passed to the chmod command in (3)?
 
+	chmod 751 justifytext.py
+
 Q2. Copy-paste the directories in your path, and the contents of the directory where you placed the symbolic link as printed out by ls -l.
+
+
+	$PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+	ls -l /bin =
+	-rwxr-xr-x 1 root root 1017016 Apr 23 17:43 bash
+	-rwxr-xr-x 3 root root   31152 Oct 21  2013 bunzip2
+	-rwxr-xr-x 1 root root 1918032 Nov 14  2013 busybox
+	-rwxr-xr-x 3 root root   31152 Oct 21  2013 bzcat
+	lrwxrwxrwx 1 root root       6 Oct 21  2013 bzcmp -> bzdiff
+	-rwxr-xr-x 1 root root    2140 Oct 21  2013 bzdiff
+	lrwxrwxrwx 1 root root       6 Oct 21  2013 bzegrep -> bzgrep
+	-rwxr-xr-x 1 root root    4877 Oct 21  2013 bzexe
+	lrwxrwxrwx 1 root root       6 Oct 21  2013 bzfgrep -> bzgrep
+	-rwxr-xr-x 1 root root    3642 Oct 21  2013 bzgrep
+	-rwxr-xr-x 3 root root   31152 Oct 21  2013 bzip2
+	-rwxr-xr-x 1 root root   14480 Oct 21  2013 bzip2recover
+	lrwxrwxrwx 1 root root       6 Oct 21  2013 bzless -> bzmore
+	-rwxr-xr-x 1 root root    1297 Oct 21  2013 bzmore
+	-rwxr-xr-x 1 root root   47904 Mar 24 02:35 cat
+	-rwxr-xr-x 1 root root   14688 May 23  2013 chacl
+	-rwxr-xr-x 1 root root   60160 Mar 24 02:35 chgrp
+	-rwxr-xr-x 1 root root   56032 Mar 24 02:35 chmod
+	-rwxr-xr-x 1 root root   60160 Mar 24 02:35 chown
+	-rwxr-xr-x 1 root root   10480 Feb 18  2013 chvt
+	-rwxr-xr-x 1 root root  130304 Mar 24 02:35 cp
+	-rwxr-xr-x 1 root root  137272 Jun  2  2013 cpio
+	-rwxr-xr-x 1 root root  121272 Feb 19  2014 dash
+	-rwxr-xr-x 1 root root   64256 Mar 24 02:35 date
+	-rwxr-xr-x 1 root root   10536 Jul  3 14:03 dbus-cleanup-sockets
+	-rwxr-xr-x 1 root root  429936 Jul  3 14:03 dbus-daemon
+	-rwxr-xr-x 1 root root   10464 Jul  3 14:03 dbus-uuidgen
+	-rwxr-xr-x 1 root root   56136 Mar 24 02:35 dd
+	-rwxr-xr-x 1 root root   97736 Mar 24 02:35 df
+	-rwxr-xr-x 1 root root  110080 Mar 24 02:35 dir
+	-rwxr-xr-x 1 root root   22896 Jun  3 15:54 dmesg
+	lrwxrwxrwx 1 root root       8 Dec 13  2013 dnsdomainname -> hostname
+	lrwxrwxrwx 1 root root       8 Dec 13  2013 domainname -> hostname
+	-rwxr-xr-x 1 root root   82256 Feb 18  2013 dumpkeys
+	-rwxr-xr-x 1 root root   31296 Mar 24 02:35 echo
+	-rwxr-xr-x 1 root root   47712 Jul 16  2013 ed
+	-rwxr-xr-x 1 root root  183696 Jan 18  2014 egrep
+	-rwxr-xr-x 1 root root   27168 Mar 24 02:35 false
+	-rwxr-xr-x 1 root root   10488 Feb 18  2013 fgconsole
+	-rwxr-xr-x 1 root root  138352 Jan 18  2014 fgrep
+	-rwxr-xr-x 1 root root   36144 Jun  3 15:54 findmnt
+	-rwxr-xr-x 1 root root   31864 Nov 29  2012 fuser
+	-rwsr-xr-x 1 root root   30800 Dec 16  2013 fusermount
+	-rwxr-xr-x 1 root root   23688 May 23  2013 getfacl
+	-rwxr-xr-x 1 root root  191952 Jan 18  2014 grep
+	-rwxr-xr-x 2 root root    2303 Jan 10  2014 gunzip
+	-rwxr-xr-x 1 root root    5937 Jan 10  2014 gzexe
+	-rwxr-xr-x 1 root root   94048 Jan 10  2014 gzip
+	-rwxr-xr-x 1 root root   14736 Dec 13  2013 hostname
+	-rwxr-xr-x 1 root root  307328 Feb 17  2014 ip
+	lrwxrwxrwx 1 root root      63 Sep  4 13:48 justifytext -> /home/jonathan/ELEC424/ELEC424-Lab01_Programming/justifytext.py
+	-rwxr-xr-x 1 root root   10480 Feb 18  2013 kbd_mode
+	-rwxr-xr-x 1 root root   23088 Jan  6  2014 kill
+	-rwxr-xr-x 1 root root  154616 Apr 10 09:07 kmod
+	-rwxr-xr-x 1 root root  153664 Jun 10  2013 less
+	-rwxr-xr-x 1 root root   10440 Jun 10  2013 lessecho
+	lrwxrwxrwx 1 root root       8 Jun 10  2013 lessfile -> lesspipe
+	-rwxr-xr-x 1 root root   15912 Jun 10  2013 lesskey
+	-rwxr-xr-x 1 root root    7758 Jun 10  2013 lesspipe
+	-rwxr-xr-x 1 root root   56072 Mar 24 02:35 ln
+	-rwxr-xr-x 1 root root  111432 Feb 18  2013 loadkeys
+	-rwxr-xr-x 1 root root   49136 Feb 16  2014 login
+	-rwxr-xr-x 1 root root   92328 Aug 21 18:34 loginctl
+	-rwxr-xr-x 1 root root   63912 Dec 18  2013 lowntfs-3g
+	-rwxr-xr-x 1 root root  110080 Mar 24 02:35 ls
+	-rwxr-xr-x 1 root root   44688 Jun  3 15:54 lsblk
+	lrwxrwxrwx 1 root root       4 Apr 10 09:07 lsmod -> kmod
+	-rwxr-xr-x 1 root root   51936 Mar 24 02:35 mkdir
+	-rwxr-xr-x 1 root root   35456 Mar 24 02:35 mknod
+	-rwxr-xr-x 1 root root   39648 Mar 24 02:35 mktemp
+	-rwxr-xr-x 1 root root   39600 Jun  3 15:54 more
+	-rwsr-xr-x 1 root root   94792 Jun  3 15:54 mount
+	-rwxr-xr-x 1 root root   10456 Mar 12 20:41 mountpoint
+	lrwxrwxrwx 1 root root      20 Feb  4  2014 mt -> /etc/alternatives/mt
+	-rwxr-xr-x 1 root root   68760 Jun  2  2013 mt-gnu
+	-rwxr-xr-x 1 root root  122088 Mar 24 02:35 mv
+	-rwxr-xr-x 1 root root  192008 Oct  1  2012 nano
+	lrwxrwxrwx 1 root root      20 Feb  4  2014 nc -> /etc/alternatives/nc
+	-rwxr-xr-x 1 root root   31248 Dec  3  2012 nc.openbsd
+	lrwxrwxrwx 1 root root      24 Feb  4  2014 netcat -> /etc/alternatives/netcat
+	-rwxr-xr-x 1 root root  119624 Aug  5 10:44 netstat
+	lrwxrwxrwx 1 root root       8 Dec 13  2013 nisdomainname -> hostname
+	-rwxr-xr-x 1 root root   59848 Dec 18  2013 ntfs-3g
+	-rwxr-xr-x 1 root root   10312 Dec 18  2013 ntfs-3g.probe
+	-rwxr-xr-x 1 root root   67608 Dec 18  2013 ntfs-3g.secaudit
+	-rwxr-xr-x 1 root root   18432 Dec 18  2013 ntfs-3g.usermap
+	-rwxr-xr-x 1 root root   26728 Dec 18  2013 ntfscat
+	-rwxr-xr-x 1 root root   30752 Dec 18  2013 ntfsck
+	-rwxr-xr-x 1 root root   30824 Dec 18  2013 ntfscluster
+	-rwxr-xr-x 1 root root   34920 Dec 18  2013 ntfscmp
+	-rwxr-xr-x 1 root root   22528 Dec 18  2013 ntfsdump_logfile
+	-rwxr-xr-x 1 root root   39024 Dec 18  2013 ntfsfix
+	-rwxr-xr-x 1 root root   55416 Dec 18  2013 ntfsinfo
+	-rwxr-xr-x 1 root root   31928 Dec 18  2013 ntfsls
+	-rwxr-xr-x 1 root root   26672 Dec 18  2013 ntfsmftalloc
+	-rwxr-xr-x 1 root root   30824 Dec 18  2013 ntfsmove
+	-rwxr-xr-x 1 root root   34856 Dec 18  2013 ntfstruncate
+	-rwxr-xr-x 1 root root   43632 Dec 18  2013 ntfswipe
+	lrwxrwxrwx 1 root root       6 Feb 18  2013 open -> openvt
+	-rwxr-xr-x 1 root root   18912 Feb 18  2013 openvt
+	lrwxrwxrwx 1 root root      14 Mar 12 20:41 pidof -> /sbin/killall5
+	-rwsr-xr-x 1 root root   44168 May  7 16:51 ping
+	-rwsr-xr-x 1 root root   44680 May  7 16:51 ping6
+	-rwxr-xr-x 1 root root   35448 Apr 11 12:20 plymouth
+	-rwxr-xr-x 1 root root   31608 Apr 11 12:20 plymouth-upstart-bridge
+	-rwxr-xr-x 1 root root   93232 Jan  6  2014 ps
+	-rwxr-xr-x 1 root root   31392 Mar 24 02:35 pwd
+	lrwxrwxrwx 1 root root       4 Apr 23 17:43 rbash -> bash
+	-rwxr-xr-x 1 root root   39528 Mar 24 02:35 readlink
+	-rwxr-xr-x 1 root root      89 Jul 16  2013 red
+	-rwxr-xr-x 1 root root   60160 Mar 24 02:35 rm
+	-rwxr-xr-x 1 root root   43648 Mar 24 02:35 rmdir
+	lrwxrwxrwx 1 root root       4 Oct  1  2012 rnano -> nano
+	-rwxr-xr-x 1 root root   19248 Aug 28  2013 run-parts
+	-rwxr-xr-x 1 root root     254 Jul 18 04:42 running-in-container
+	-rwxr-xr-x 1 root root   73352 Feb 13  2014 sed
+	-rwxr-xr-x 1 root root   36232 May 23  2013 setfacl
+	-rwxr-xr-x 1 root root   39896 Feb 18  2013 setfont
+	-rwxr-xr-x 1 root root   24216 Oct 28  2012 setserial
+	-rwxr-xr-x 1 root root   12052 Jan 29  2014 setupcon
+	lrwxrwxrwx 1 root root       4 Feb 19  2014 sh -> dash
+	lrwxrwxrwx 1 root root       4 Mar 29  2012 sh.distrib -> dash
+	-rwxr-xr-x 1 root root   31296 Mar 24 02:35 sleep
+	-rwxr-xr-x 1 root root   76624 Feb 17  2014 ss
+	lrwxrwxrwx 1 root root       7 Nov 14  2013 static-sh -> busybox
+	-rwxr-xr-x 1 root root   68256 Mar 24 02:35 stty
+	-rwsr-xr-x 1 root root   36936 Feb 16  2014 su
+	-rwxr-xr-x 1 root root   27200 Mar 24 02:35 sync
+	-rwxr-xr-x 1 root root   14720 Jun  3 15:54 tailf
+	-rwxr-xr-x 1 root root  353840 Feb  4  2014 tar
+	-rwxr-xr-x 1 root root   10344 Aug 28  2013 tempfile
+	-rwxr-xr-x 1 root root   60224 Mar 24 02:35 touch
+	-rwxr-xr-x 1 root root   27168 Mar 24 02:35 true
+	-rwxr-xr-x 1 root root  248040 Aug 21 18:34 udevadm
+	-rwxr-xr-x 1 root root   14336 Dec 16  2013 ulockmgr_server
+	-rwsr-xr-x 1 root root   69120 Jun  3 15:54 umount
+	-rwxr-xr-x 1 root root   31360 Mar 24 02:35 uname
+	-rwxr-xr-x 2 root root    2303 Jan 10  2014 uncompress
+	-rwxr-xr-x 1 root root    2762 Feb 18  2013 unicode_start
+	-rwxr-xr-x 1 root root  110080 Mar 24 02:35 vdir
+	-rwxr-xr-x 1 root root    6248 Feb  5  2014 vmmouse_detect
+	-rwxr-xr-x 1 root root     946 Aug 28  2013 which
+	-rwxr-xr-x 1 root root   27368 Mar 23 10:44 whiptail
+	lrwxrwxrwx 1 root root       8 Dec 13  2013 ypdomainname -> hostname
+	-rwxr-xr-x 1 root root    1939 Jan 10  2014 zcat
+	-rwxr-xr-x 1 root root    1779 Jan 10  2014 zcmp
+	-rwxr-xr-x 1 root root    5766 Jan 10  2014 zdiff
+	-rwxr-xr-x 1 root root     142 Jan 10  2014 zegrep
+	-rwxr-xr-x 1 root root     142 Jan 10  2014 zfgrep
+	-rwxr-xr-x 1 root root    2133 Jan 10  2014 zforce
+	-rwxr-xr-x 1 root root    5940 Jan 10  2014 zgrep
+	-rwxr-xr-x 1 root root    2039 Jan 10  2014 zless
+	-rwxr-xr-x 1 root root    1912 Jan 10  2014 zmore
+	-rwxr-xr-x 1 root root    5049 Jan 10  2014 znew
+
+
 
 Part 2
 
