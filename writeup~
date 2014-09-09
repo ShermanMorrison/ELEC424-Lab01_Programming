@@ -1,0 +1,28 @@
+Lab01: Programming in a Linux Environment
+Jonathan Wilson
+
+Part 1
+
+Q1. What were the arguments passed to the chmod command in (3)?
+
+Q2. Copy-paste the directories in your path, and the contents of the directory where you placed the symbolic link as printed out by ls -l.
+
+Part 2
+
+Q3. What operations are done on the input integer?
+
+Q4. What is the present bug, and under what conditions is it triggered? 
+
+Q5. What are possible ways to fix this bug?
+
+Part 3
+
+Q6. What is the maximum length array our program can sort?
+
+Q7. What is the difference between incrementing int* and char* by 1 (i.e. ((int *)p)+1) vs ((char *)p)+1))?
+
+Q8. Are the input arrays passed by reference or value to merge_sort?
+
+Q9. What is the difference between #include "header.h" and #include <header.h>?
+
+Q10. Use your justifytext script to justify this writeup (after completing it) to a length of 80 characters.
