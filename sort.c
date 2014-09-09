@@ -68,7 +68,6 @@ merge_sort(int input_array[], int output_array[], int num)
 	int * j = ((int *) p) + 1;
 	char * k = ((char *) p) + 1;
 
-	printf("j, k = %d, %d",j,k);
 	int i;
 	for (i = 0; i < num; i++){
 		output_array[i] = input_array[i];
