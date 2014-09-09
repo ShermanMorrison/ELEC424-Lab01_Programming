@@ -25,7 +25,7 @@ main(int argc, char **argv)
         int num;
 	int to_sort_array[MAX_NUM];
 	int sorted_array[MAX_NUM];
-	
+
 	if (argc != 2) {
 		perror("Input arguments are not correct.\n");
 		return 1;
@@ -64,14 +64,25 @@ main(int argc, char **argv)
 void 
 merge_sort(int input_array[], int output_array[], int num)
 {
+	int * p = 0;
+	int * j = ((int *) p) + 1;
+	char * k = ((char *) p) + 1;
+
+	printf("j, k = %d, %d",j,k);
 	int i;
-	
 	for (i = 0; i < num; i++){
 		output_array[i] = input_array[i];
+	#ifdef DSC
+			output_array[i] *= -1;
+	#endif
 	}
 	
 	divide(output_array,0,num-1);
-
+ 	#ifdef DSC
+ 		for (i=0; i<num; i++){
+			output_array[i] *= -1;
+ 		}
+ 	#endif	
 }
 
 void order(int array[], int start, int middle, int end){
