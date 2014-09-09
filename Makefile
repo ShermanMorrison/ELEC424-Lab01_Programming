@@ -1,2 +1,9 @@
+ORDER= ASC
+CC = gcc
+CFLAGS= "-D$(ORDER)=1 -I"
+	
 sort : sort.c read_data.a
-	gcc -o sort sort.c read_data.a -I.
+	$(CC) -g -o $@ sort.c read_data.a $(CFLAGS)
+
+clean:
+	rm -f sort.o sort 
