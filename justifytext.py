@@ -2,9 +2,9 @@
 import sys
 import math
 
-# 
-# Prints out a new version of a text file justified to the given line length justify_length
-#
+""" 
+ Prints out a new version of a text file justified to the given line length "justify_length"
+"""
 def justify(file_name, justify_length):
 
 	file = open(file_name, 'r')

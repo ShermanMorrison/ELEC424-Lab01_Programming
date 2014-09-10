@@ -38,9 +38,19 @@ Part                                                                           2
 
 Q3.     What     operations     are     done     on     the    input    integer?
 
+It  is  shifted  to  the  right by one bit, the last 4 bits are masked, and then
+it       is       shifted       to       the      left      by      4      bits.
+
 Q4.  What  is  the  present  bug,  and  under  what  conditions is it triggered?
 
+A  segmentation  fault  occurs  if  the  input  integer,  after being rounded to
+thenearest  even  integer  below  it,  modulo'd  by 16, and multiplied by 16, is
+greater  than  128.  This  is  because the code in CHECK attempts to overwrite a
+string       literal,       which       is       in       read-only      memory.
+
 Q5.      What      are      possible      ways      to     fix     this     bug?
+One  good  way to fix the bug, and still have x be a rewritable string, would be
+to    have    x    point    to    space    in   memory   supplied   by   malloc.
 
 Part                                                                           3
 

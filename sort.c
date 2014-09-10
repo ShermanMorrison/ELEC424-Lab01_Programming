@@ -6,8 +6,8 @@
 
 
 // function definition
-void divide(int array[], int start, int end);
-void order(int array[], int start, int middle, int end);
+void divide(int array[], int start, int end); // divide array into halves
+void order(int array[], int start, int middle, int end); // merge two sorted arrays
 
 /* 
  * Takes a file name as input from command line
@@ -59,15 +59,13 @@ main(int argc, char **argv)
 }
 
 /*
- * INSERT DESCRIPTION HERE
+ * Modifies output_array to be the sorted version of input_array.
+ * num is the number of elements to sort.
+ * If DSC is defined, sort in descending order. Default is ascending order.
  */
 void 
 merge_sort(int input_array[], int output_array[], int num)
 {
-	int * p = 0;
-	int * j = ((int *) p) + 1;
-	char * k = ((char *) p) + 1;
-
 	int i;
 	for (i = 0; i < num; i++){
 		output_array[i] = input_array[i];
@@ -84,6 +82,9 @@ merge_sort(int input_array[], int output_array[], int num)
  	#endif	
 }
 
+/*
+ * Merge two sorted regions of the array
+ */
 void order(int array[], int start, int middle, int end){
 
 	int old_array[end - 1];
@@ -107,7 +108,9 @@ void order(int array[], int start, int middle, int end){
 	}
 }
 
-
+/*
+ * Recursively divide the array into halves and then sort the two halves.
+ */
 void divide(int array[], int start, int end){
 	if (start != end){
 		divide(array, start, (start + end)/2);

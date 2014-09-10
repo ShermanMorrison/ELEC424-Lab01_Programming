@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 //#define CHECK if(a > 128){system("clear");}
 void CHECK( unsigned char a){
 	if(a > 128){
