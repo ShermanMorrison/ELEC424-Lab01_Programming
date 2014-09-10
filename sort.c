@@ -121,5 +121,3 @@ void divide(int array[], int start, int end){
 
 
 
-
-
